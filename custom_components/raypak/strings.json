@@ -1,0 +1,60 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Raypak Pool Heater",
+        "description": "Enter your RayMoTe server and device token.",
+        "data": {
+          "server": "Server",
+          "token": "Device Token",
+          "poll_interval": "Poll Interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to the server.",
+      "invalid_auth": "Invalid device token.",
+      "unknown": "An unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This device is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Raypak Options",
+        "data": {
+          "poll_interval": "Poll Interval (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "inlet_temperature": { "name": "Inlet Temperature" },
+      "outlet_temperature": { "name": "Outlet Temperature" },
+      "flue_temperature": { "name": "Flue Temperature" },
+      "ignition_voltage": { "name": "Ignition Voltage" },
+      "flame_current": { "name": "Flame Current" },
+      "fault_code": { "name": "Fault Code" },
+      "error_text": { "name": "Error Text" },
+      "capacity": { "name": "Capacity" },
+      "heating_cycles": { "name": "Heating Cycles" },
+      "heating_time": { "name": "Heating Time" },
+      "power_cycles": { "name": "Power Cycles" },
+      "flow_pressure": { "name": "Flow Pressure" },
+      "flow_rate": { "name": "Flow Rate" },
+      "vsp_speed": { "name": "VSP Speed" },
+      "firing_rate": { "name": "Firing Rate" },
+      "operation_mode_sensor": { "name": "Operation Mode" }
+    },
+    "binary_sensor": {
+      "hardware_connected": { "name": "Hardware Connected" },
+      "vsp_run_status": { "name": "VSP Run Status" }
+    },
+    "water_heater": {
+      "pool_heater": { "name": "Pool Heater" }
+    }
+  }
+}
