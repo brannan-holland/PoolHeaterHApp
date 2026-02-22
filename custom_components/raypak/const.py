@@ -105,10 +105,7 @@ SENSOR_DESCRIPTIONS: tuple[RaypakSensorEntityDescription, ...] = (
         key="ignition_voltage",
         translation_key="ignition_voltage",
         pin=PIN_IGNITION_VOLTAGE,
-        native_unit_of_measurement=UnitOfElectricPotential.VOLT,
-        device_class=SensorDeviceClass.VOLTAGE,
-        state_class=SensorStateClass.MEASUREMENT,
-        value_fn=lambda x: round(float(x), 2) if x is not None else None,
+        value_fn=lambda x: str(x).strip('"') if x is not None else None,
     ),
     RaypakSensorEntityDescription(
         key="flame_current",
