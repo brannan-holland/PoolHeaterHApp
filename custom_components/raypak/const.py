@@ -17,7 +17,6 @@ from homeassistant.components.binary_sensor import (
 from homeassistant.const import (
     UnitOfTemperature,
     UnitOfElectricPotential,
-    UnitOfElectricCurrent,
     UnitOfTime,
     PERCENTAGE,
 )
@@ -111,8 +110,7 @@ SENSOR_DESCRIPTIONS: tuple[RaypakSensorEntityDescription, ...] = (
         key="flame_current",
         translation_key="flame_current",
         pin=PIN_FLAME_CURRENT,
-        native_unit_of_measurement=UnitOfElectricCurrent.MICROAMPERE,
-        device_class=SensorDeviceClass.CURRENT,
+        native_unit_of_measurement="µA",
         state_class=SensorStateClass.MEASUREMENT,
         value_fn=lambda x: round(float(x), 1) if x is not None else None,
     ),
